@@ -14,13 +14,13 @@ server.listen(server.get('port'), listenCallback);
 
 
 function home(req, res){
-  res.send('/html/index.html', {root: __dirname+'/public'};
+  res.sendFile('/html/index.html', {root: __dirname+'/public'});
 }
 
 function weather(req, res){
-  res.send('/html/weather.html', {root: __dirname+'/public'};
+  res.sendFile('/html/weather.html', {root: __dirname+'/public'});
 }
 
 function listenCallback(){
-  console.log('Now listening on port ' + server.get('port');
+  console.log('Now listening on port ' + server.get('port'));
 }

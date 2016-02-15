@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Welcome to AJAX</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css">
+  <script src="https://code.jquery.com/jquery-1.12.0.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
+</head>
+<body>
+  <div class="container">
+    <div class="row">
+      <div class="form-group">
+        <label>Latitude:</label>
+        <input type="text" class='form-control' id='latitude' name='latitude'>
+      </div>
+      <div class="form-group">
+        <label>Longitude:</label>
+        <input type="text" class="form-control" id="longitude" name="longtiude">
+      </div>
+      <button class="btn btn-default" id='get-weather'>Get Weather</button>
+    </div>
+    <hr>
+    <div class="row">
+      <pre id="output">
+
+      </pre>
+    </div>
+  </div>
+
+
+  <script src="js/config.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
