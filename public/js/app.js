@@ -1,12 +1,14 @@
+
+    var weatherData = {};
 $(document).ready(function(){
-  var baseUrl = 'https://api.forecast.io/';
+  var baseUrl = 'https://api.forecast.io/forecast/';
 
   $('#get-weather').on('click', getWeather);
 
 
-
   function buildUrl(lat, lon){
-    return baseUrl + apiKey+'/'+lat+','+lon;
+    // return 'https://api.forecast.io/forecast/9a1a8e934b9478b1ba2b389e84e45d06/37.8267,-122.423'
+      return baseUrl + apiKey+'/'+lat+','+lon;
   }
 
   function getWeather(){
@@ -22,8 +24,8 @@ $(document).ready(function(){
     $.ajax(options);
   }
 
-
   function successHandler(data){
+    weatherData = data;
     $('#output').text(JSON.stringify(data));
     console.log(data);
   }
